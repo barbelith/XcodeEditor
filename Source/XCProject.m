@@ -46,7 +46,7 @@
 
         if (!_dataStore)
         {
-            [NSException raise:XCProjectNotFoundException format:@"Project file not found at file path %@", _filePath];
+            [NSException raise:@"Project not found" format:@"Project file not found at file path %@", _filePath];
         }
 
         _fileOperationQueue = [[XCFileOperationQueue alloc] initWithBaseDirectory:[_filePath stringByDeletingLastPathComponent]];
